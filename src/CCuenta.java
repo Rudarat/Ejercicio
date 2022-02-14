@@ -1,4 +1,9 @@
 
+/**
+ * 
+ * @author Ana Jaime Sevilla
+ *
+ */
 public class CCuenta {
 	
 		private String nombre;
@@ -10,6 +15,14 @@ public class CCuenta {
 	    {
 	    }
 
+	    /**
+	     * 
+	     * @param nom
+	     * @param cue
+	     * @param sal
+	     * @param tipo
+	     */
+	    
 	    public CCuenta(String nom, String cue, double sal, double tipo)
 	    {
 	        setNombre(nom);
@@ -17,11 +30,22 @@ public class CCuenta {
 	        saldo=sal;
 	    }
 
+	    /**
+	     * 
+	     * @return saldo
+	     */
+	    
 	    public double estado()
 	    {
 	        return saldo;
 	    }
 
+	    /**
+	     * 
+	     * @param cantidad
+	     * @throws Exception
+	     */
+	    
 	    public void ingresar(double cantidad) throws Exception
 	    {
 	        if (cantidad<0)
@@ -29,6 +53,12 @@ public class CCuenta {
 	        saldo = saldo + cantidad;
 	    }
 
+	    /**
+	     * 
+	     * @param cantidad
+	     * @throws Exception
+	     */
+	    
 	    public void retirar(double cantidad) throws Exception
 	    {
 	        if (cantidad <= 0)
@@ -37,27 +67,57 @@ public class CCuenta {
 	            throw new Exception ("No se hay suficiente saldo");
 	        saldo = saldo - cantidad;
 	    }
+	    
+	    /**
+	     * 
+	     * @return nombre
+	     */
 
 		public String getNombre() {
 			return nombre;
 		}
+		
+		/**
+		 * 
+		 * @param nombre
+		 */
 
 		public void setNombre(String nombre) {
 			this.nombre = nombre;
 		}
+		
+		/**
+		 * 
+		 * @return cuenta
+		 */
 
 		public String getCuenta() {
 			return cuenta;
 		}
+		
+		/**
+		 * 
+		 * @param cuenta
+		 */
 
 		public void setCuenta(String cuenta) {
 			this.cuenta = cuenta;
 		}
+		
+		/**
+		 * 
+		 * @return tipoInteres
+		 */
 
 		public double getTipoInteres() {
 			return tipoInteres;
 		}
 
+		/**
+		 * 
+		 * @param tipoInteres
+		 */
+		
 		public void setTipoInteres(double tipoInteres) {
 			this.tipoInteres = tipoInteres;
 		}
